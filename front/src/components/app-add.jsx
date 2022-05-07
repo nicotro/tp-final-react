@@ -46,7 +46,7 @@ class AddApp extends PureComponent {
             <div>
                 <NavAdd></NavAdd>
                 <Routes>
-                    <Route path="/" element={<HomeAdd />}></Route>
+                    <Route path="/" element={<HomeAdd/>}></Route>
                     <Route path="/form" element={<FormAdd navigate={this.props.navigate} />}></Route>
                     {/* <Route path="/detail/:id" element={<DetailAdd findAdd={this.findAdd} id={this.state.add.id} isFav={this.isFav} addToFav={this.addToFav} removeFromFav={this.removeFromFav} />}></Route> */}
                     <Route path="/detail/:id" element={<DetailAdd />}></Route>

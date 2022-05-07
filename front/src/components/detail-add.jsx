@@ -5,6 +5,7 @@ import { getAddByIdService } from "../services/add-service";
 import { withNavigate } from "../tools/with-navigate";
 import { withParams } from "../tools/with-params";
 import { ButtonFav } from "./button-fav";
+import { DetailCaroussel } from "./detail-caroussel";
 
 class DetailAdd extends PureComponent {
     constructor(props) {
@@ -30,10 +31,11 @@ class DetailAdd extends PureComponent {
                     <div className="alert alert-info mt-3 text-center">loading ...</div>
                     :
                     (<div>
-                        <h1 className='text-center'>Add #{add.id} details</h1>
+                        <h3 className='text-center'>Add #{add.id} details</h3>
                         <div className='container'>
-                            <div className="card mx-auto mb-3 text-start" style={{ width: '32rem' }}>
-                                <img src={add.pictures[0]} className="card-img-top" alt="product" />
+                            <div className="card mx-auto mb-3 text-start bg-light" style={{ width: '32rem' }}>
+                                {/* <img src={add.pictures[0]} className="card-img-top" alt="product" /> */}
+                                <DetailCaroussel pictures={add.pictures} className="card-img-top" alt="product" />
                                 <div className="card-body">
                                     <h5 className="card-title">{add.title}</h5>
                                     <p className="card-text">{add.content}</p>

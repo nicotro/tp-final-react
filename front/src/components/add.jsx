@@ -6,17 +6,22 @@ export function Add(props) {
 
     return (
         <div className="col-10 mx-auto">
-            <div className="card m-3">
+            <div className="card m-3 bg-light">
                 <div className="row no-gutters">
                     <div className="col-3">
-                        <img src={add.pictures[0]} className="card-img" alt="Add picture" />
+                        <img src={add.pictures[0]} className="d-block h-100 mx-auto img-thumbnail" alt="Add picture" />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
                             <h5 className="card-title">{add.title}</h5>
                             <p className="card-text">{(add.content).substring(0, 100)}<em> (...)</em></p>
                             <p className="card-text">
-                                <Link to={"/detail/" + add.id}>See add Details</Link>
+                                {add.id != 0
+                                    ?
+                                    <Link to={"/detail/" + add.id}>See add Details</Link>
+                                    :
+                                    <span></span>
+                                }
                             </p>
                         </div>
                     </div>
