@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# m2i training - React final TP
 
 Done with NodeJS & [Create React App](https://github.com/facebook/create-react-app).  
 Install dependencies with **npm i** in both the front and the back directories.  
