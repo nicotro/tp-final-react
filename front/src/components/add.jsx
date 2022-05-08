@@ -17,7 +17,7 @@ export function Add(props) {
                             <p className="card-text">
                                 {add.id != 0
                                     ?
-                                    <Link to={"/detail/" + add.id}>See add Details</Link>
+                                    <Link to={"/detail/" + add.id}>See ad Details</Link>
                                     :
                                     <span></span>
                                 }

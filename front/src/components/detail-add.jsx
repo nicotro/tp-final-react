@@ -31,7 +31,7 @@ class DetailAdd extends PureComponent {
                     <div className="alert alert-info mt-3 text-center">loading ...</div>
                     :
                     (<div>
-                        <h3 className='text-center'>Add #{add.id} details</h3>
+                        <h3 className='text-center'>Ad #{add.id} details</h3>
                         <div className='container'>
                             <div className="card mx-auto mb-3 text-start bg-light" style={{ width: '32rem' }}>
                                 <DetailCaroussel pictures={add.pictures} className="card-img-top" alt="product" />

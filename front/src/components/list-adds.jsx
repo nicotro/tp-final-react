@@ -17,7 +17,7 @@ export class ListAdds extends PureComponent {
     }
 
     render() {
-        // search results or all adds
+        // search results or all ads
         const adds = this.props.adds.length > 0 ? this.props.adds : this.state.adds
         return (
             <>

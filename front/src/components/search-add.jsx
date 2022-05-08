@@ -21,7 +21,7 @@ export class SearchAdd extends PureComponent {
         return (
             <div className="col-10 mx-auto">
                 <form className="form-row m-3" onSubmit={this.onSearch}>
-                    <input type="text" className="form-control col-10" onChange={this.searchFieldChange} placeholder="search in add title" />
+                    <input type="text" className="form-control col-10" onChange={this.searchFieldChange} placeholder="search in ad title" />
                     <button className="btn btn-primary col-2" type="submit">search</button>
                 </form>
             </div>

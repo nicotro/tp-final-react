@@ -9,7 +9,7 @@ export function NavAdd(props) {
                     <Link className="nav-link" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/form">Create Add</Link>
+                    <Link className="nav-link" to="/form">Create Ad</Link>
                 </li>
             </ul>
             <ul className="navbar-nav justify-content-end">

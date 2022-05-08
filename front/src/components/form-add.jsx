@@ -61,12 +61,12 @@ class FormAdd extends PureComponent {
             <div className="container col-8">
                 <form onSubmit={this.confirm} className="mt-3">
                     <div className="form-group form-row">
-                        <input type="text" className="form-control my-3" name="title" onChange={this.fieldsOnChange} placeholder="Add title" />
-                        <textarea className="form-control" name="content" rows="5" onChange={this.fieldsOnChange} placeholder="Add description" />
+                        <input type="text" className="form-control my-3" name="title" onChange={this.fieldsOnChange} placeholder="Ad title" />
+                        <textarea className="form-control" name="content" rows="5" onChange={this.fieldsOnChange} placeholder="Ad description" />
                     </div>
                     <div className="form-group">
                         <div className="form-group form-row mt-3">
-                            <input type="text" className="form-control col-9" name="pictures" placeholder="Add picture url" value={this.state.picturesUrl} onChange={this.handlePicturesUrlChange} />
+                            <input type="text" className="form-control col-9" name="pictures" placeholder="Ad picture url" value={this.state.picturesUrl} onChange={this.handlePicturesUrlChange} />
                             <button className="btn btn-primary mb-0 col-3" name="picturesBtn" onClick={this.addPicture}>Add picture</button>
                             {this.state.picturesCount > 0
                                 ?
@@ -76,7 +76,7 @@ class FormAdd extends PureComponent {
                             }
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-primary" name="createAddBtn">Create Add</button>
+                    <button type="submit" className="btn btn-primary" name="createAddBtn">Create Ad</button>
                 </form>
 
             </div>
