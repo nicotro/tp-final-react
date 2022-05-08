@@ -1,8 +1,8 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FavCount } from './fav-count';
 
-export function NavAdd() {
-    return ( 
+export function NavAdd(props) {
+    return (
         <nav className="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
@@ -14,9 +14,9 @@ export function NavAdd() {
             </ul>
             <ul className="navbar-nav justify-content-end">
                 <li className="nav-item">
-                    <Link className="nav-link" to="/favorites"><FavCount count="0"/></Link>
+                    <Link className="nav-link" to="/favorites"><FavCount count={props.total} /></Link>
                 </li>
             </ul>
-
-        </nav>     );
+        </nav>
+    );
 }

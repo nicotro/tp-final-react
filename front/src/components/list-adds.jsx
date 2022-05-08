@@ -13,7 +13,6 @@ export class ListAdds extends PureComponent {
     componentDidMount() {
         getAddsService().then((res) => {
             this.setState({ adds: [...res.data] });
-            console.log('loading all adds');
         })
     }
 
@@ -22,7 +21,7 @@ export class ListAdds extends PureComponent {
         const adds = this.props.adds.length > 0 ? this.props.adds : this.state.adds
         return (
             <>
-                {adds.map((a, i) => (<Add key={i} currentAdd={a}></Add>))}
+                {adds.map((a, i) => (<Add key={i} currentAdd={a}> isFav={this.props.isFav} addToFav={this.props.addToFav} removeFromFav={this.props.removeFromFav}</Add>))}
             </>
         );
     }

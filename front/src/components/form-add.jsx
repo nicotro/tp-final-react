@@ -70,7 +70,7 @@ class FormAdd extends PureComponent {
                             <button className="btn btn-primary mb-0 col-3" name="picturesBtn" onClick={this.addPicture}>Add picture</button>
                             {this.state.picturesCount > 0
                                 ?
-                                (<div className="alert alert-success mt-2 col-12">{this.state.add.pictures.map((p, i) => (<div>{p}</div>))}</div>)
+                                (<div className="alert alert-success mt-2 col-12">{this.state.add.pictures.map((p, i) => (<div key={i}>{p}</div>))}</div>)
                                 :
                                 (<div className="alert alert-primary mt-2 col-9">Please enter 1 to 4 picture url</div>)
                             }

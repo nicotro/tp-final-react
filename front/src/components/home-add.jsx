@@ -18,10 +18,11 @@ export function HomeAdd(props) {
         }
         else setfoundAdds([])
     }
+
     return (
         <div className="container mx-auto">
             <SearchAdd searchText={searchText}></SearchAdd>
-            <ListAdds adds={foundAdds}></ListAdds>
+            <ListAdds adds={foundAdds} isFav={props.isFav} addToFav={props.addToFav} removeFromFav={props.removeFromFav}></ListAdds>
         </div>
     );
 }

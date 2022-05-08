@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 export function Add(props) {
     const add = props.currentAdd
-
     return (
         <div className="col-10 mx-auto">
             <div className="card m-3 bg-light">

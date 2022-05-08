@@ -13,7 +13,7 @@ class AddApp extends PureComponent {
         super(props);
         this.state = {
             favorites: [],
-            add: undefined
+            add: undefined,
         }
     }
 
@@ -23,11 +23,10 @@ class AddApp extends PureComponent {
 
     addToFav = (id) => {
         getAddByIdService(id).then(res => {
-            this.setState({ add: res.data });
+            if (res.data != undefined) 
+                this.setState({ favorites: [...this.state.favorites, res.data] })
         })
-        if (this.state.add != undefined) {
-            this.setState({ favorites: [...this.state.favorites, { ...this.state.add }] })
-        }
+
     }
 
     removeFromFav = (id) => {
@@ -36,7 +35,7 @@ class AddApp extends PureComponent {
     }
 
     findAdd = (id) => {
-        searchAddsService (id).then(res => {
+        searchAddsService(id).then(res => {
             this.setState({ add: res.data })
         })
     }
@@ -44,12 +43,11 @@ class AddApp extends PureComponent {
     render() {
         return (
             <div>
-                <NavAdd></NavAdd>
+                <NavAdd total={this.state.favorites.length}></NavAdd>
                 <Routes>
-                    <Route path="/" element={<HomeAdd/>}></Route>
+                    <Route path="/" element={<HomeAdd isFav={this.isFav} addToFav={this.addToFav} removeFromFav={this.removeFromFav} />}></Route>
                     <Route path="/form" element={<FormAdd navigate={this.props.navigate} />}></Route>
-                    {/* <Route path="/detail/:id" element={<DetailAdd findAdd={this.findAdd} id={this.state.add.id} isFav={this.isFav} addToFav={this.addToFav} removeFromFav={this.removeFromFav} />}></Route> */}
-                    <Route path="/detail/:id" element={<DetailAdd />}></Route>
+                    <Route path="/detail/:id" element={<DetailAdd findAdd={this.findAdd} add={this.state.add} isFav={this.isFav} addToFav={this.addToFav} removeFromFav={this.removeFromFav} />}></Route>
                     <Route path="/favorites" element={<FavAdd />}></Route>
                 </Routes>
             </div>

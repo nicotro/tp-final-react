@@ -11,8 +11,12 @@ export function ButtonFav(props) {
     }
     return (
         <>
-            {/* <button className="btn btn-primary m-1" onClick={addToFavButton}>{isFav(id) ? 'Remove from favorites' : 'Add To favorites'}</button> */}
-            <button className="btn btn-secondary m-1" disabled>Favorites button</button>
+        {isFav(id) 
+        ?
+            <button className="btn btn-danger m-1" onClick={addToFavButton}>Remove from favorites</button>
+            :    
+            <button className="btn btn-success m-1" onClick={addToFavButton}>Add To favorites</button>
+        }
         </>
     )
 }
