@@ -14,7 +14,7 @@ export function NavAdd(props) {
             </ul>
             <ul className="navbar-nav justify-content-end">
                 <li className="nav-item">
-                    <Link className="nav-link" to="/favorites"><FavCount count={props.total} /></Link>
+                    <FavCount count={props.total} />
                 </li>
             </ul>
         </nav>

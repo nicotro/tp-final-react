@@ -3,9 +3,9 @@ import { PureComponent } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { getAddByIdService, searchAddsService } from "../services/add-service";
 import DetailAdd from "./detail-add";
-import { FavAdd } from "./fav-add";
 import FormAdd from "./form-add";
 import { HomeAdd } from "./home-add";
+import { ListAdds } from "./list-adds";
 import { NavAdd } from "./nav-add";
 
 class AddApp extends PureComponent {
@@ -48,7 +48,7 @@ class AddApp extends PureComponent {
                     <Route path="/" element={<HomeAdd isFav={this.isFav} addToFav={this.addToFav} removeFromFav={this.removeFromFav} />}></Route>
                     <Route path="/form" element={<FormAdd navigate={this.props.navigate} />}></Route>
                     <Route path="/detail/:id" element={<DetailAdd findAdd={this.findAdd} add={this.state.add} isFav={this.isFav} addToFav={this.addToFav} removeFromFav={this.removeFromFav} />}></Route>
-                    <Route path="/favorites" element={<FavAdd />}></Route>
+                    <Route path="/favorites" element={<ListAdds adds={this.state.favorites} isFav={this.isFav} addToFav={this.addToFav} removeFromFav={this.removeFromFav}/>}></Route>
                 </Routes>
             </div>
         );
